@@ -32,8 +32,8 @@
 
         header {
             text-align: center;
-            margin-bottom: 40px;
-            padding-top: 20px;
+            margin-bottom: 30px;
+            padding-top: 10px;
         }
 
         h1 {
@@ -43,6 +43,19 @@
             margin-bottom: 10px;
             text-transform: uppercase;
             letter-spacing: 1px;
+            /* Добавляем перенос, если слово все равно не влезет */
+            overflow-wrap: break-word;
+        }
+
+        /* ИСПРАВЛЕНИЕ ДЛЯ ТЕЛЕФОНОВ */
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem; /* Уменьшаем шрифт заголовка на мобилках */
+                letter-spacing: 0.5px;
+            }
+            body {
+                padding: 15px; /* Немного меньше отступы по краям */
+            }
         }
 
         .subtitle {
@@ -86,7 +99,7 @@
         h2 {
             font-family: 'Montserrat', sans-serif;
             margin-bottom: 15px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
         }
@@ -99,6 +112,7 @@
             margin-bottom: 15px;
             position: relative;
             padding-left: 25px;
+            font-size: 0.95rem;
         }
 
         .card li::before {
@@ -121,12 +135,12 @@
         }
 
         footer {
-            margin-top: 50px;
+            margin-top: 40px;
             text-align: center;
             border-top: 1px solid #ddd;
             padding-top: 20px;
             color: #95a5a6;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .footer-info {
